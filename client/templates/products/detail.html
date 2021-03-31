@@ -1,0 +1,32 @@
+<!--
+    Exercise: Create a UI helper to convert text in markdown format to HTML
+-->
+<template name="productDetails">
+    <div class="container margin-top-lg">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="/images/products/{{image}}" class="img-responsive" alt="{{description}}"/>
+            </div>
+            <div class="col-md-6">
+                <h1 class="margin-top-none">{{name}}</h1>
+                
+                <p><a href="#">Vendor</a></p>
+                
+                <p class="lead"><i>{{summary}}</i></p> <!-- summary -->
+                <!-- Use {{{}}} instead of {{}} to prevent escaping of HTML tags --> 
+                <p class="lead">{{{showdown description}}}</p> <!--description -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>{{money price}}</h3>
+                        <hr/>
+                        <p>
+                            <a href="#" class="btn btn-success" id="add-to-cart">
+                                <i class="glyphicon glyphicon-shopping-cart"></i> Add To Cart
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
